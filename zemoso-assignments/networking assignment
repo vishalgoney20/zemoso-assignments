@@ -1,0 +1,70 @@
+Command 1:
+
+         printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+
+
+-> HTTP means HyperText Transfer Protocol. HTTP is the underlying protocol used by the World Wide Web and this protocol defines 
+    how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+	
+    HTTP is called a stateless protocol because each command is executed independently, without any knowledge 
+    of the commands that came before it. This is the main reason that it is difficult to implement Web sites that react 
+	intelligently to user input. 
+	
+	The first command is HTTP head request. HTTP headers are the code that transfers data between a Web server and 
+	a browser. HTTP headers are mainly intended for the communication between the server and client in both directions. 
+	 
+	The respone for the above command i received is as follows
+	 
+	 output:
+	       
+		    vishal@z-Latitude-E5450:~$ printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+		    HTTP/1.1 301 TLS Redirect
+			Date: Mon, 27 Jan 2020 04:13:50 GMT
+			Server: Varnish
+			X-Varnish: 373714145
+			X-Cache: cp5011 int
+			X-Cache-Status: int-front
+			Server-Timing: cache;desc="int-front"
+			Set-Cookie: WMF-Last-Access=27-Jan-2020;Path=/;HttpOnly;secure;Expires=Fri, 28 Feb 2020 00:00:00 GMT
+			Set-Cookie: WMF-Last-Access-Global=27-Jan-2020;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Fri, 28 Feb 2020 00:00:00 GMT
+			X-Client-IP: 183.82.101.16
+			Location: https://en.wikipedia.org/
+			Content-Length: 0
+			Via: HTTP/1.1 forward.http.proxy:3128
+			Connection: keep-alive
+
+    
+-> The received response will be given as input to the nc command. Then the website i.e, en.wikipedia.org  will be rendered on the mentioned port number.    	
+			
+     
+-> netcat is a computer networking utility for reading from and writing to network connections using TCP or UDP. 
+    The command is designed to be a dependable back-end that can be used directly or easily driven by other programs
+	and scripts. 	
+	 
+	The command used to make a connection is :
+	 
+	      nc options portnumber
+		  
+	eg:
+		  nc -l google.com 2000
+
+
+Command 2:
+     
+	After modifying the given command, it will be as follows .
+
+    printf 'HEAD / HTTP/1.1\r\nHost: www.rediff.com\r\n\r\n' | nc www.rediff.com 80
+
+output :
+
+vishal@z-Latitude-E5450:~$ printf 'HEAD / HTTP/1.1\r\nHost: www.rediff.com\r\n\r\n' | nc www.rediff.com 80
+HTTP/1.1 301 Moved Permanently
+Server: AkamaiGHost
+Content-Length: 0
+Location: https://www.rediff.com/
+Date: Mon, 27 Jan 2020 05:22:09 GMT
+Via: HTTP/1.1 forward.http.proxy:3128
+Connection: keep-alive
+
+
+	

@@ -1,0 +1,165 @@
+Command :
+_____________
+
+curl -s http://public-dns.info/nameserver/br.csv | cut -d, -f1 | shuf | tail -n 50 | xargs -i timeout 1 ping -c1 -w 1 {} | grep "time=" | 
+awk '{print substr($7, 6, length($7)) " " substr($4, 1, length($4) -1)}' | sort -n | awk '{print $2 " " $1 "ms"}' | head -n 10
+
+
+Explanation :
+
+--->  In the above mentioned linux command pipes concept is used to send the output of one program/ command as input to the another program. 
+        Pipes are denoted by the symbol " | " . The linux commands are seperated by the symbol " | ". The output of the previous command is given 
+        as an input to the next command.
+		
+---> Curl :
+                The curl command transfers data to or from a network server, using one of the supported protocols (HTTP, HTTPS, FTP, FTPS, SCP, 
+				SFTP, TFTP, DICT, TELNET, LDAP or FILE). It is designed to work without user interaction, so it is ideal for use in a shell script.
+				    
+				The mentioned url contains data in CSV  format. The data will be transferd to the command line.
+                -s  option stands for silent mode i.e,  Don't show progress meter or error messages.
+
+--->  cut :
+                The cut command in UNIX is a command for cutting out the sections from each line of files and writing the result to standard output. 
+				It can be used to cut parts of a line by byte position, character and field. 		
+                    
+				-d is used to set the delimiter. -f stands for filed. Most unix files doesn’t have fixed-length lines. To extract the useful information you 
+				need to cut by fields rather than columns.
+					
+				example:
+					
+				$ cat state.txt
+				Andhra Pradesh
+				Arunachal Pradesh
+				Assam
+				Bihar
+				Chhattisgarh
+					
+				$ cut -d " " -f 1 state.txt
+				Andhra
+				Arunachal
+				Assam
+				Bihar
+				Chhattisgarh
+
+					
+--->  shuf :
+				The shuf command in Linux lets you generate random permutations or shuffles the data randomly .
+					
+--->  tail :
+                print the last N number of data of the given input. By default it prints the last 10 lines of the specified files. In the above mentioned command 
+				it prints the last 50 lines of the output.
+					
+--->  xargs :
+                This command is used to build and execute commands from standard input.					
+					
+--->  Timeout :
+                As the name suggests, the timeout command in Linux allows you to execute a command with a time limit.
+
+---> Ping :
+                PING (Packet Internet Groper) command is used to check the network connectivity between host and server/host. This command takes as input
+				the IP address or the URL  and sends a data packet to the specified address with the message “PING” and get a response from the server/host 
+				this time is recorded which is called latency.		
+                
+				-c option is used to define the number of packets to send to the server/host .
+                -w option is used to stop pingig after sometime .			
+				
+--->  grep :
+				The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern.
+				
+--->  substr :
+                substr, can be used to select a substring from the input.
+
+				substr(s, a, b) : it returns b number of chars from string s, starting at position a. The parameter b is optional, in which case it means up to the end of the string.
+
+				For instance, consider a file with the following content:
+
+				every good
+
+				Let us save this data into a file called data.txt
+				Then, here are a few case examples:
+
+				awk '{print substr($1,1,1)}' data.txt   #returns e
+				awk '{print substr($1,3)   }' data.txt   #returns ery
+				awk '{print substr($2,3)   }' data.txt   #returns od
+				
+--->sort :
+               SORT command is used to sort a file, arranging the records in a particular order. By default, the sort command sorts file assuming the contents are ASCII.		
+               To sort in numerical order -n option is used.
+			 
+--->head :
+               The head command print the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. 	
+               In the above mentioned command it prints 10 lines.
+		
+
+
+
+
+		
+			
+The final output for the command i got is :
+______________________________________________
+
+vishal@z-Latitude-E5450:~$ curl -s http://public-dns.info/nameserver/br.csv |cut -d, -f1 | shuf |tail -n 50|xargs -i timeout 1 ping -c1 -w 1 {} | grep "time=" |awk '{print substr($7,6, length($7)) "" substr($4,1,length($4)-1)}' | sort -n | awk '{print $2 "" $1 "ms"}' | head -n 10
+353186.216.61.61ms
+382200.159.205.11ms
+388168.181.62.74ms
+504200.169.8.1ms
+507200.150.112.205ms
+509201.71.226.147ms
+511200.195.148.170ms
+513200.220.192.86ms
+519131.196.216.17ms
+552189.125.102.209ms
+
+
+If i remove the head present at the end of the command the output would be :
+____________________________________________________________________
+
+
+
+vishal@z-Latitude-E5450:~$ curl -s http://public-dns.info/nameserver/br.csv |cut -d, -f1 | shuf |tail -n 50|xargs -i timeout 1 ping -c1 -w 1 {} | grep "time=" |awk '{print substr($7,6, length($7)) "" substr($4,1,length($4)-1)}' | sort -n | awk '{print $2 "" $1 "ms"}' 
+329189.125.73.13ms
+346186.216.62.29ms
+384168.181.111.20ms
+401200.99.138.104ms
+447186.211.1.191ms
+463186.216.62.5ms
+518200.214.185.206ms
+520177.184.131.54ms
+523186.230.29.10ms
+523189.23.31.242ms
+528170.247.211.253ms
+528177.159.232.53ms
+528177.92.24.110ms
+534187.51.127.93ms
+539187.108.17.42ms
+548177.184.220.54ms
+556186.193.181.226ms
+573170.239.136.10ms
+578177.69.96.187ms
+581201.76.162.157ms
+586189.8.80.35ms
+588200.195.148.170ms
+592177.85.235.243ms
+593168.228.8.10ms
+599200.195.144.194ms
+601177.87.96.4ms
+602200.221.11.100ms
+606177.92.0.90ms
+609200.150.85.66ms
+613179.185.88.86ms
+614200.143.177.83ms
+615187.33.230.114ms
+615187.50.66.150ms
+620187.95.98.82ms
+623200.194.198.76ms
+632186.216.62.1ms
+644186.248.139.42ms
+645189.56.100.42ms
+655177.135.204.163ms
+672187.61.9.42ms
+688189.42.32.146ms
+
+			
+			
+			
