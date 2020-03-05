@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7a07fc5-b4b4-4793-8781-3dacf0673751" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YZxtsRarIITH5oef198gl2Gq15" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.ThreeExceptions">
+    <configuration name="Exceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exceptions" />
+      <module name="8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeExceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThreeExceptions" />
+      <module name="8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ThreeExceptions" />
+        <item itemvalue="Application.Exceptions" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7a07fc5-b4b4-4793-8781-3dacf0673751" name="Default Changelist" comment="" />
+      <created>1583164135255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583164135255</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="771" y="300" width="424" height="520" key="FileChooserDialogImpl" timestamp="1583166907862">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="771" y="300" width="424" height="520" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583166907862" />
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1583166928220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583166928220" />
+    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1583166928220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583166928220" />
+    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1583166928220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583166928220" />
+    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1583166928220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583166928220" />
+    <state x="302" y="154" width="1372" height="806" key="new project wizard" timestamp="1583166911104">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="154" width="1372" height="806" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1583166911104" />
+  </component>
+</project>

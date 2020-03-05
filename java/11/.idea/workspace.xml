@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="123dfae3-08a7-4370-bb1f-8498f502de68" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YZGieuDvPqGB57Trq4sIdhf7Ci" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReadFile" />
+      <module name="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReadFile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="123dfae3-08a7-4370-bb1f-8498f502de68" name="Default Changelist" comment="" />
+      <created>1583142831949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583142831949</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="705" y="358" width="567" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583145444966">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="705" y="358" width="567" height="397" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1583145444966" />
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1583163101650">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583163101650" />
+    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1583163101649">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583163101649" />
+    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1583163101649">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583163101649" />
+    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1583163101650">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583163101650" />
+    <state x="302" y="154" width="1372" height="806" key="new project wizard" timestamp="1583162382869">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="154" width="1372" height="806" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1583162382869" />
+  </component>
+</project>

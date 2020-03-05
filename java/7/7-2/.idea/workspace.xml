@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5e98302a-acd0-4b38-a9e2-d109f09816fe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yh9IfrTcK0uHwAqrsTdQbdGEnv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="7-2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Testing" />
+      <module name="7-2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Testing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e98302a-acd0-4b38-a9e2-d109f09816fe" name="Default Changelist" comment="" />
+      <created>1583383880402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583383880402</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1583385271817">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583385271817" />
+    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1583385271816">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583385271816" />
+    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1583385271816">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583385271816" />
+    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1583385271817">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583385271817" />
+    <state x="302" y="154" width="1372" height="806" key="new project wizard" timestamp="1583385316672">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="154" width="1372" height="806" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1583385316672" />
+    <state x="657" y="252" key="run.anything.popup" timestamp="1583385246143">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="252" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583385246143" />
+  </component>
+</project>

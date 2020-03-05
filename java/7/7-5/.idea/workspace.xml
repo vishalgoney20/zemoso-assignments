@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3f6e8581-34ca-4ff8-96cf-b0ac75b59152" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Ya3doa5XJ9iOBNoGMPx6RTM86e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="InnerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InnerClass" />
+      <module name="7-5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.InnerClass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f6e8581-34ca-4ff8-96cf-b0ac75b59152" name="Default Changelist" comment="" />
+      <created>1583166967508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583166967508</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1583214215411">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583214215411" />
+    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1583214215410">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583214215410" />
+    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1583214215410">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583214215410" />
+    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1583214215410">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583214215410" />
+    <state x="302" y="154" width="1372" height="806" key="new project wizard" timestamp="1583168349437">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="154" width="1372" height="806" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1583168349437" />
+    <state x="657" y="252" key="run.anything.popup" timestamp="1583167682920">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="252" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583167682920" />
+  </component>
+</project>

@@ -1,0 +1,9 @@
+ Character occurences 
+  	a	 	1
+  	s	 	3
+  	T	 	1
+  	v	 	1
+  	h	 	2
+  	i	 	3
+  	l	 	1
+  	.	 	1
