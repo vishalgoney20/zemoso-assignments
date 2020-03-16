@@ -1,7 +1,7 @@
 import java.io.File;
-import java.util.*;
+import java.util.Scanner;
 import java.util.logging.Logger;
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 public class FileRegularExpression {
     private static Logger logger = Logger.getLogger(FileRegularExpression.class.getName());
@@ -21,7 +21,6 @@ public class FileRegularExpression {
             } else if (Pattern.matches(expression, file.getName()))
                 logger.info(file.getAbsolutePath());
         }
-
     }
 
     /**

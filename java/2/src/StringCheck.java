@@ -7,6 +7,7 @@ Space Complexity :O(1)
 */
 
 import java.util.Scanner;
+import java.util.function.Supplier;
 import java.util.logging.Logger;
 
 public class StringCheck {
@@ -19,7 +20,7 @@ public class StringCheck {
      * @return True if contains all the alphabets , False if doesn't
      */
     public boolean check(String str) {
-        int[] arr = new int[26];
+        /*int[] arr = new int[26];
         int count = 0;
         int index;
         for (char ch : str.toCharArray()) {
@@ -32,7 +33,11 @@ public class StringCheck {
             if (count == 26)
                 break;
         }
-        if (count == 26)
+
+         */
+
+        int count1= (int) str.toLowerCase().chars().filter(c->c>='a'&&c<='z').distinct().count();
+        if (count1 == 26)
             return true;
         return false;
     }
@@ -40,7 +45,7 @@ public class StringCheck {
     /**
      * method to take input and invoke check method.
      */
-    public void tester() {
+    public void checkIfAllAlphabetsExist() {
         Scanner sc = new Scanner(System.in);
         logger.info("Enter the String to check whether it contains all the alphabets or not");
         String inputString = sc.next();
@@ -54,6 +59,6 @@ public class StringCheck {
 
     public static void main(String[] args) {
         StringCheck str = new StringCheck();
-        str.tester();
+        str.checkIfAllAlphabetsExist();
     }
 }

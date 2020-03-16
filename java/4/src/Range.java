@@ -16,7 +16,7 @@ public class Range {
      * calculate the range within +30 or -30 to the date of anniversary.
      *
      * @param testCases number of tests to calculate Range.
-     * @throws IOException it is thrown when an input or output operation is failed.
+     * @throws IOException it is thrown when an input or output operation is failed i.e, readLine() method throws IOException.
      */
 
     public void calculateRange(int testCases) throws IOException {
@@ -71,9 +71,9 @@ public class Range {
     /**
      * invokes calculateRange method
      *
-     * @throws IOException it is thrown when an input or output operation is failed.
+     * @throws IOException it is thrown when an input or output operation is failed i.e, readLine() method throws IOException.
      */
-    public void tester() throws IOException {
+    public void testCalculateRange() throws IOException {
         System.out.println("Enter no of test cases ");
         int testCases = Integer.parseInt(b.readLine());
         calculateRange(testCases);
@@ -81,7 +81,7 @@ public class Range {
 
     public static void main(String[] args) throws IOException {
         Range range = new Range();
-        range.tester();
+        range.testCalculateRange();
     }
 }
 /*

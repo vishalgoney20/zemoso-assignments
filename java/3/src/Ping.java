@@ -57,7 +57,7 @@ class Ping {
      * method to take input and invoke pingHost method.
      * input will contain url of host and no of times to hit the host.
      */
-    public void tester() {
+    public void reachableOrNot() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the url of host to ping ");
         String urlOfHost = sc.next();
@@ -68,6 +68,6 @@ class Ping {
 
     public static void main(String[] args) {
         Ping ping = new Ping();
-        ping.tester();
+        ping.reachableOrNot();
     }
 }
