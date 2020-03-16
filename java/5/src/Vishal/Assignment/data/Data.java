@@ -1,12 +1,20 @@
 package Vishal.Assignment.data;
 
+import Vishal.Assignment.singleton.Singleton;
+
+import java.util.logging.Logger;
+
 public class Data {
     int a;
     char b;
-    public void printVariables()
-    {
-        System.out.println(a);
-        System.out.println(b);
+    private static Logger logger = Logger.getLogger(Data.class.getName());
+
+    /**
+     * prints the values of a and b.
+     */
+    public void printVariables() {
+        logger.info(String.valueOf(a));
+        logger.info(String.valueOf(b));
     }
 
     // Local variables must be initialized in java..

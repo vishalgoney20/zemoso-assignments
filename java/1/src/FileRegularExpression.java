@@ -1,27 +1,39 @@
 import java.io.File;
 import java.util.*;
+import java.util.logging.Logger;
 import java.util.regex.*;
 
 public class FileRegularExpression {
-    public void findFilePath(File path, String expression) throws NullPointerException {
-        if(path.listFiles() == null)
+    private static Logger logger = Logger.getLogger(FileRegularExpression.class.getName());
+
+    /**
+     * finds the path of the file that matches the filename with the mentioned regular expression.
+     *
+     * @param path       home directory path to start with
+     * @param expression a regular expression to match with
+     */
+    public void findFilePath(File path, String expression) {
+        if (path.listFiles() == null)
             return;
         for (File file : path.listFiles()) {
-            if(file.isDirectory()) {
+            if (file.isDirectory()) {
                 findFilePath(file, expression);
-            }
-            else if (Pattern.matches(expression, file.getName()))
-                System.out.println(file.getAbsolutePath());
+            } else if (Pattern.matches(expression, file.getName()))
+                logger.info(file.getAbsolutePath());
         }
 
     }
+
+    /**
+     * main method execution starts from here i.e, instance of a class is created and findFilePath method is invoked.
+     */
 
     public static void main(String[] args) {
 
         FileRegularExpression file = new FileRegularExpression();
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("Enter the regular expression that a filename to match or press q to quit");
+            logger.info("Enter the regular expression that a filename to match or press q to quit");
             String expression = sc.nextLine();
             if (expression == "q")
                 break;
@@ -30,4 +42,5 @@ public class FileRegularExpression {
         }
     }
 }
-//  .*/*.java
+
+// sample expression ->  .*/*.java

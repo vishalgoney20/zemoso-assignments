@@ -3,12 +3,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.logging.Logger;
 
 public class Range {
+    private static Logger logger = Logger.getLogger(Range.class.getName());
 
     InputStreamReader i = new InputStreamReader(System.in);
     BufferedReader b = new BufferedReader(i);
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
+
+    /**
+     * calculate the range within +30 or -30 to the date of anniversary.
+     *
+     * @param testCases number of tests to calculate Range.
+     * @throws IOException it is thrown when an input or output operation is failed.
+     */
 
     public void calculateRange(int testCases) throws IOException {
 
@@ -41,24 +50,29 @@ public class Range {
 
 
             if (signupDate.getTime().after(currentDate.getTime())) {
-                System.out.println("No range");
+                logger.info("No range");
                 continue;
             }
             signupDate.set(Calendar.YEAR, currentDate.get(Calendar.YEAR));
 
             signupDate.add(Calendar.DATE, -30);
-            System.out.println(sdf.format(signupDate.getTime()));
+            logger.info(sdf.format(signupDate.getTime()));
             signupDate.add(Calendar.DATE, +60);
 
             if (signupDate.getTime().after(currentDate.getTime()))
-                System.out.println(sdf.format(currentDate.getTime()));
+                logger.info(sdf.format(currentDate.getTime()));
             else
-                System.out.println(sdf.format(signupDate.getTime()));
+                logger.info(sdf.format(signupDate.getTime()));
 
             testCases = testCases - 1;
         }
     }
 
+    /**
+     * invokes calculateRange method
+     *
+     * @throws IOException it is thrown when an input or output operation is failed.
+     */
     public void tester() throws IOException {
         System.out.println("Enter no of test cases ");
         int testCases = Integer.parseInt(b.readLine());
@@ -71,6 +85,8 @@ public class Range {
     }
 }
 /*
+Sample io
+
 Input:
 
 5

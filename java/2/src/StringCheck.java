@@ -7,8 +7,17 @@ Space Complexity :O(1)
 */
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class StringCheck {
+    private static Logger logger = Logger.getLogger(StringCheck.class.getName());
+
+    /**
+     * checks whether the given string contains alphabets or not.
+     *
+     * @param str string (combination of alphabets and letters ) that need to be checked.
+     * @return True if contains all the alphabets , False if doesn't
+     */
     public boolean check(String str) {
         int[] arr = new int[26];
         int count = 0;
@@ -28,16 +37,20 @@ public class StringCheck {
         return false;
     }
 
+    /**
+     * method to take input and invoke check method.
+     */
     public void tester() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the String to check whether it contains all the alphabets or not");
+        logger.info("Enter the String to check whether it contains all the alphabets or not");
         String inputString = sc.next();
         boolean result = check(inputString);
         if (result == true)
-            System.out.println(inputString + " contains all alphabets");
+            logger.info(inputString + " contains all alphabets");
         else
-            System.out.println(inputString + " doesn't contains all alphabets");
+            logger.info(inputString + " doesn't contains all alphabets");
     }
+
 
     public static void main(String[] args) {
         StringCheck str = new StringCheck();
