@@ -8,8 +8,8 @@ import java.util.logging.Logger;
 public class Range {
     private static Logger logger = Logger.getLogger(Range.class.getName());
 
-    InputStreamReader i = new InputStreamReader(System.in);
-    BufferedReader b = new BufferedReader(i);
+    InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
 
     /**
@@ -22,26 +22,26 @@ public class Range {
     public void calculateRange(int testCases) throws IOException {
 
         while (testCases > 0) {
-            String text[] = b.readLine().split(" ");
-            Calendar signupDate = Calendar.getInstance();
+            String text[] = bufferedReader.readLine().split(" ");
+            Calendar signUpDate = Calendar.getInstance();
             Calendar currentDate = Calendar.getInstance();
 
-            String[] text1 = text[0].split("-");
+            String[] splittedText1 = text[0].split("-");
             int[] arr = new int[3];
-            int i = 0;
-            for (String s : text1) {
-                arr[i++] = Integer.parseInt(s);
+            int index = 0;
+            for (String s : splittedText1) {
+                arr[index++] = Integer.parseInt(s);
             }
 
-            signupDate.set(Calendar.DATE, arr[0]);
-            signupDate.set(Calendar.MONTH, arr[1] - 1);
-            signupDate.set(Calendar.YEAR, arr[2]);
+            signUpDate.set(Calendar.DATE, arr[0]);
+            signUpDate.set(Calendar.MONTH, arr[1] - 1);
+            signUpDate.set(Calendar.YEAR, arr[2]);
 
-            String[] text2 = text[1].split("-");
+            String[] splittedText2 = text[1].split("-");
             int[] arr1 = new int[3];
-            i = 0;
-            for (String s : text2) {
-                arr1[i++] = Integer.parseInt(s);
+            index = 0;
+            for (String s : splittedText2) {
+                arr1[index++] = Integer.parseInt(s);
             }
 
             currentDate.set(Calendar.DATE, arr1[0]);
@@ -49,20 +49,20 @@ public class Range {
             currentDate.set(Calendar.YEAR, arr1[2]);
 
 
-            if (signupDate.getTime().after(currentDate.getTime())) {
+            if (signUpDate.getTime().after(currentDate.getTime())) {
                 logger.info("No range");
                 continue;
             }
-            signupDate.set(Calendar.YEAR, currentDate.get(Calendar.YEAR));
+            signUpDate.set(Calendar.YEAR, currentDate.get(Calendar.YEAR));
 
-            signupDate.add(Calendar.DATE, -30);
-            logger.info(sdf.format(signupDate.getTime()));
-            signupDate.add(Calendar.DATE, +60);
+            signUpDate.add(Calendar.DATE, -30);
+            logger.info(sdf.format(signUpDate.getTime()));
+            signUpDate.add(Calendar.DATE, +60);
 
-            if (signupDate.getTime().after(currentDate.getTime()))
+            if (signUpDate.getTime().after(currentDate.getTime()))
                 logger.info(sdf.format(currentDate.getTime()));
             else
-                logger.info(sdf.format(signupDate.getTime()));
+                logger.info(sdf.format(signUpDate.getTime()));
 
             testCases = testCases - 1;
         }
@@ -75,7 +75,7 @@ public class Range {
      */
     public void testCalculateRange() throws IOException {
         System.out.println("Enter no of test cases ");
-        int testCases = Integer.parseInt(b.readLine());
+        int testCases = Integer.parseInt(bufferedReader.readLine());
         calculateRange(testCases);
     }
 

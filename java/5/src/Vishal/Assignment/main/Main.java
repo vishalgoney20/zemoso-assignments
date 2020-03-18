@@ -9,7 +9,6 @@ public class Main {
      * creates instance of data class and invokes printVariables method
      * creates instance of Singleton class and invokes setter and getter methods
      */
-
     public static void main(String[] args) {
         Data data = new Data();
         data.printVariables();
