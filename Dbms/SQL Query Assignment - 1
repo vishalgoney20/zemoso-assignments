@@ -1,0 +1,206 @@
+1. Find out the PG-13 rated comedy movies. DO NOT use the film_list table.
+
+mysql> select film_id , title from film where film_id in (select film_id from film_category where 
+       (category_id in (select category_id from category where name='Comedy')) and rating='PG-13');
+
++---------+-------------------------+
+| film_id | title                   |
++---------+-------------------------+
+|       7 | AIRPLANE SIERRA         |
+|      28 | ANTHEM LUKE             |
+|     324 | FLINTSTONES HAPPINESS   |
+|     335 | FREEDOM CLEOPATRA       |
+|     385 | GROUNDHOG UNCUT         |
+|     502 | KNOCK WARLOCK           |
+|     657 | PARADISE SABRINA        |
+|     672 | PERFECT GROOVE          |
+|     754 | RUSHMORE MERMAID        |
+|     756 | SADDLE ANTITRUST        |
+|     857 | STRICTLY SCARFACE       |
+|     905 | TRAINSPOTTING STRANGERS |
++---------+-------------------------+
+12 rows in set (0.00 sec)
+
+
+2. Find out the top 3 rented horror movies.
+
+
+mysql> select f.film_id,f.title from rental r,inventory i,film f,film_category fc,category c  where 
+       (r.inventory_id = i.inventory_id) and (i.film_id = f.film_id) and (f.film_id=fc.film_id)  and 
+       (fc.category_id=c.category_id) and (c.name='Horror') group by f.film_id order by count(*)DESC LIMIT 3;
++---------+--------------+
+| film_id | title        |
++---------+--------------+
+|     702 | PULP BEVERLY |
+|     301 | FAMILY SWEET |
+|     870 | SWARM GOLD   |
++---------+--------------+
+3 rows in set (0.01 sec)
+
+
+3.  Find out the list of customers from India who have rented sports movies.
+
+mysql> select customer.customer_id,customer.first_name,customer.last_name from 
+       rental Inner join customer on(rental.customer_id=customer.customer_id)
+       inner join address on(customer.address_id=address.address_id)
+       inner join city on(address.city_id=city.city_id)
+       inner join country on(city.country_id=country.country_id) 
+       where country.country='India' and rental.rental_id in 
+       (select r.rental_id from rental r,inventory i,film f,film_category fc,category c 
+       where (r.inventory_id = i.inventory_id) and (i.film_id = f.film_id) and (f.film_id=fc.film_id) 
+       and (fc.category_id=c.category_id) and (c.name='Sports'));
++-------------+------------+-------------+
+| customer_id | first_name | last_name   |
++-------------+------------+-------------+
+|         259 | LENA       | JENSEN      |
+|         358 | SAMUEL     | MARLOW      |
+|         370 | WAYNE      | TRUONG      |
+|         367 | ADAM       | GOOCH       |
+|         123 | SHANNON    | FREEMAN     |
+|         554 | DWAYNE     | OLVERA      |
+|         468 | TIM        | CARY        |
+|         274 | NAOMI      | JENNINGS    |
+|         259 | LENA       | JENSEN      |
+|          78 | LORI       | WOOD        |
+|         259 | LENA       | JENSEN      |
+|         419 | CHAD       | CARBONE     |
+|         356 | GERALD     | FULTZ       |
+|          78 | LORI       | WOOD        |
+|         316 | STEVEN     | CURLEY      |
+|         502 | BRETT      | CORNWELL    |
+|         224 | PEARL      | GARZA       |
+|         271 | PENNY      | NEAL        |
+|         296 | RAMONA     | HALE        |
+|         508 | MILTON     | HOWLAND     |
+|         296 | RAMONA     | HALE        |
+|         358 | SAMUEL     | MARLOW      |
+|          68 | NICOLE     | PETERSON    |
+|         421 | LEE        | HAWKS       |
+|         426 | BRADLEY    | MOTLEY      |
+|         274 | NAOMI      | JENNINGS    |
+|         208 | LUCY       | WHEELER     |
+|          15 | HELEN      | HARRIS      |
+|         121 | JOSEPHINE  | GOMEZ       |
+|         231 | GEORGIA    | JACOBS      |
+|         468 | TIM        | CARY        |
+|         403 | MIKE       | WAY         |
+|         121 | JOSEPHINE  | GOMEZ       |
+|         356 | GERALD     | FULTZ       |
+|         468 | TIM        | CARY        |
+|         316 | STEVEN     | CURLEY      |
+|         175 | ANNETTE    | OLSON       |
+|         296 | RAMONA     | HALE        |
+|         502 | BRETT      | CORNWELL    |
+|         167 | SALLY      | PIERCE      |
+|         209 | TONYA      | CHAPMAN     |
+|          60 | MILDRED    | BAILEY      |
+|         271 | PENNY      | NEAL        |
+|         468 | TIM        | CARY        |
+|         336 | JOSHUA     | MARK        |
+|         419 | CHAD       | CARBONE     |
+|         358 | SAMUEL     | MARLOW      |
+|          15 | HELEN      | HARRIS      |
+|          60 | MILDRED    | BAILEY      |
+|         274 | NAOMI      | JENNINGS    |
+|         446 | THEODORE   | CULP        |
+|         268 | NINA       | SOTO        |
+|         209 | TONYA      | CHAPMAN     |
+|         336 | JOSHUA     | MARK        |
+|         135 | JUANITA    | MASON       |
+|          68 | NICOLE     | PETERSON    |
+|          59 | CHERYL     | MURPHY      |
+|         135 | JUANITA    | MASON       |
+|         192 | LAURIE     | LAWRENCE    |
+|         259 | LENA       | JENSEN      |
+|         231 | GEORGIA    | JACOBS      |
+|         117 | EDITH      | MCDONALD    |
+|         421 | LEE        | HAWKS       |
+|         367 | ADAM       | GOOCH       |
+|          32 | AMY        | LOPEZ       |
+|          78 | LORI       | WOOD        |
+|         136 | ANITA      | MORALES     |
+|         412 | ALLEN      | BUTTERFIELD |
+|         175 | ANNETTE    | OLSON       |
+|         508 | MILTON     | HOWLAND     |
+|         297 | SHERRI     | RHODES      |
+|         192 | LAURIE     | LAWRENCE    |
+|          12 | NANCY      | THOMAS      |
+|         225 | ARLENE     | HARVEY      |
+|         440 | BERNARD    | COLBY       |
+|         421 | LEE        | HAWKS       |
+|         296 | RAMONA     | HALE        |
+|          59 | CHERYL     | MURPHY      |
+|          78 | LORI       | WOOD        |
+|         554 | DWAYNE     | OLVERA      |
+|         259 | LENA       | JENSEN      |
+|         225 | ARLENE     | HARVEY      |
+|         426 | BRADLEY    | MOTLEY      |
+|         300 | JOHN       | FARNSWORTH  |
+|          15 | HELEN      | HARRIS      |
+|         502 | BRETT      | CORNWELL    |
+|          60 | MILDRED    | BAILEY      |
+|         446 | THEODORE   | CULP        |
+|         167 | SALLY      | PIERCE      |
+|         123 | SHANNON    | FREEMAN     |
+|         502 | BRETT      | CORNWELL    |
+|          95 | PAULA      | BRYANT      |
+|         316 | STEVEN     | CURLEY      |
+|         300 | JOHN       | FARNSWORTH  |
+|         356 | GERALD     | FULTZ       |
+|         316 | STEVEN     | CURLEY      |
+|          28 | CYNTHIA    | YOUNG       |
+|         167 | SALLY      | PIERCE      |
+|         379 | CARLOS     | COUGHLIN    |
+|         224 | PEARL      | GARZA       |
+|         379 | CARLOS     | COUGHLIN    |
+|          15 | HELEN      | HARRIS      |
+|         117 | EDITH      | MCDONALD    |
+|         170 | BEATRICE   | ARNOLD      |
+|         209 | TONYA      | CHAPMAN     |
+|         554 | DWAYNE     | OLVERA      |
+|         123 | SHANNON    | FREEMAN     |
+|         135 | JUANITA    | MASON       |
+|         534 | CHRISTIAN  | JUNG        |
+|         186 | HOLLY      | FOX         |
+|         468 | TIM        | CARY        |
+|          78 | LORI       | WOOD        |
+|          28 | CYNTHIA    | YOUNG       |
+|         316 | STEVEN     | CURLEY      |
+|         117 | EDITH      | MCDONALD    |
++-------------+------------+-------------+
+115 rows in set (0.02 sec)
+
+
+
+4. Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+
+mysql>   select first_name,last_name from customer where customer_id in (
+    	 select rental.customer_id from rental inner join inventory on(rental.inventory_id=inventory.inventory_id) where inventory.film_id in 		
+         (select film_id from film_actor where actor_id in (select actor_id from actor_info where first_name='NICK' and last_name='WAHLBERG')) 
+    	 and rental.customer_id in(
+    	 select customer.customer_id from 
+    	 rental Inner join customer on(rental.customer_id=customer.customer_id)
+    	 inner join address on(customer.address_id=address.address_id)
+    	 inner join city on(address.city_id=city.city_id)
+    	 inner join country on(city.country_id=country.country_id) 
+    	 where country.country='Canada') );
+
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| LORETTA    | CARPENTER |
+| DARRELL    | POWER     |
++------------+-----------+
+2 rows in set (0.41 sec)
+
+
+
+5. Find out the number of movies in which “SEAN WILLIAMS” acted.
+
+mysql> select count(*) from film_actor where actor_id in (select actor_id from actor_info where first_name='SEAN' and last_name='WILLIAMS');                                                                +----------+
+| count(*) |
++----------+
+|       26 |
++----------+
+1 row in set (0.41 sec)
+

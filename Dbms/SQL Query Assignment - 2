@@ -1,0 +1,78 @@
+1. Find out the number of documentaries with deleted scenes.
+
+mysql> select count(*) from film inner join film_category on (film.film_id=film_category.film_id)     
+       where film_category.category_id=(select category_id from category where name='Documentary')  
+       and film.special_features like '%Deleted Scenes%';
+
++----------+
+| count(*) |
++----------+
+|       34 |
++----------+
+1 row in set (0.00 sec)
+
+
+
+2. Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
+
+mysql> select count(distinct inventory.film_id) from rental inner join inventory on (rental.inventory_id =inventory.inventory_id)
+       inner join film_category on(inventory.film_id=film_category.film_id)
+       and film_category.category_id=(select category_id from category where name='Sci-Fi')
+       and inventory.store_id in (SELECT inventory.store_id from inventory inner join store on (inventory.store_id=store.store_id)
+       inner join staff on (store.manager_staff_id=staff.staff_id) and staff.first_name='Jon' and last_name='Stephens');
+
++-----------------------------------+
+| count(distinct inventory.film_id) |
++-----------------------------------+
+|                                51 |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+
+3. Find out the total sales from Animation movies.
+
+mysql> select sum(amount) from rental inner join payment on (rental.rental_id = payment.rental_id)
+       inner join inventory on (rental.inventory_id=inventory.inventory_id)
+       inner join film_category on (inventory.film_id=film_category.film_id)
+       inner join category on(film_category.category_id=category.category_id) 
+       where category.category_id=(select category_id from category where name='Animation');
+
++-------------+
+| sum(amount) |
++-------------+
+|     4656.30 |
++-------------+
+1 row in set (0.01 sec)
+
+
+4. Find out the top 3 rented category of movies by “PATRICIA JOHNSON”.
+
+mysql> select category.name,count(*) from  rental inner join inventory on (rental.inventory_id = inventory.inventory_id)
+       inner join film_category on (inventory.film_id=film_category.film_id) 
+       inner join category on (film_category.category_id = category.category_id)
+       where rental.customer_id =( select customer_id from customer where first_name='PATRICIA' and last_name='JOHNSON')
+       group by category.name order by count(*) DESC LIMIT 3;
+
++-----------+----------+
+| name      | count(*) |
++-----------+----------+
+| Sports    |        5 |
+| Classics  |        4 |
+| Animation |        3 |
++-----------+----------+
+3 rows in set (0.00 sec)
+
+
+5. Find out the number of R rated movies rented by “SUSAN WILSON”.
+
+mysql> select count(*) from  rental inner join inventory on (rental.inventory_id = inventory.inventory_id)
+       inner join film on (inventory.film_id=film.film_id) where
+       film.rating='R' and rental.customer_id in ( select customer_id from customer where first_name='SUSAN' and last_name='WILSON');
+
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+
