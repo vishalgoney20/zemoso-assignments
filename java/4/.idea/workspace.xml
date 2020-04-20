@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="014f3597-d1f2-4587-883f-33c1a4212ade" name="Default Changelist" comment="" />
+    <list default="true" id="014f3597-d1f2-4587-883f-33c1a4212ade" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Range.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,23 +20,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectId" id="1YZGTLA0cCgmm5cO2E9eQcEuQMS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -74,22 +69,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="300" width="424" height="520" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584499902298" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1584499811290">
+    <state width="1807" height="162" key="GridCell.Tab.0.bottom" timestamp="1587395304646">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584499811290" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1584499811290">
+    <state width="1807" height="162" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587395304646" />
+    <state width="1807" height="162" key="GridCell.Tab.0.center" timestamp="1587395304646">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584499811290" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1584499811289">
+    <state width="1807" height="162" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587395304646" />
+    <state width="1807" height="162" key="GridCell.Tab.0.left" timestamp="1587395304645">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584499811289" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1584499811290">
+    <state width="1807" height="162" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587395304645" />
+    <state width="1807" height="162" key="GridCell.Tab.0.right" timestamp="1587395304646">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584499811290" />
+    <state width="1807" height="162" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587395304646" />
     <state x="302" y="154" width="1372" height="806" key="new project wizard" timestamp="1583222861028">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

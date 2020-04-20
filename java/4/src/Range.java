@@ -12,45 +12,60 @@ public class Range {
     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
 
+
     /**
-     * calculate the range within +30 or -30 to the date of anniversary.
+     * The date will be splitted based on '-' .
+     *
+     * @param date specifies the date i.e, signUp date or Current date.
+     * @return arr that contains date , month and year .
+     */
+    public int[] textSplit(String date){
+        String[] splittedText = date.split("-");
+        int[] arr = new int[3];
+        int index = 0;
+        for (String dateText : splittedText) {
+            arr[index++] = Integer.parseInt(dateText);
+        }
+        return arr;
+    }
+
+
+    /**
+     * calculates the range within +30 or -30 to the date of anniversary.
+     * The KYC form can be filled only for the closest anniversary in the past or within 30 days range in future.
      *
      * @param testCases number of tests to calculate Range.
      * @throws IOException it is thrown when an input or output operation is failed i.e, readLine() method throws IOException.
      */
 
-    public void calculateRange(int testCases) throws IOException {
+    public void calculateRange(int testCases)  {
 
         while (testCases > 0) {
-            String text[] = bufferedReader.readLine().split(" ");
+            String text[] = new String[0];
+            try {
+                text = bufferedReader.readLine().split(" ");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Calendar signUpDate = Calendar.getInstance();
             Calendar currentDate = Calendar.getInstance();
 
-            String[] splittedText1 = text[0].split("-");
-            int[] arr = new int[3];
-            int index = 0;
-            for (String s : splittedText1) {
-                arr[index++] = Integer.parseInt(s);
-            }
+            int[] signUp=textSplit(text[0]);
 
-            signUpDate.set(Calendar.DATE, arr[0]);
-            signUpDate.set(Calendar.MONTH, arr[1] - 1);
-            signUpDate.set(Calendar.YEAR, arr[2]);
+            signUpDate.set(Calendar.DATE, signUp[0]);
+            signUpDate.set(Calendar.MONTH, signUp[1] - 1);
+            signUpDate.set(Calendar.YEAR, signUp[2]);
 
-            String[] splittedText2 = text[1].split("-");
-            int[] arr1 = new int[3];
-            index = 0;
-            for (String s : splittedText2) {
-                arr1[index++] = Integer.parseInt(s);
-            }
+            int[] current=textSplit(text[1]);
 
-            currentDate.set(Calendar.DATE, arr1[0]);
-            currentDate.set(Calendar.MONTH, arr1[1] - 1);
-            currentDate.set(Calendar.YEAR, arr1[2]);
+            currentDate.set(Calendar.DATE, current[0]);
+            currentDate.set(Calendar.MONTH, current[1] - 1);
+            currentDate.set(Calendar.YEAR, current[2]);
 
 
             if (signUpDate.getTime().after(currentDate.getTime())) {
                 logger.info("No range");
+                testCases = testCases - 1;
                 continue;
             }
             signUpDate.set(Calendar.YEAR, currentDate.get(Calendar.YEAR));
@@ -59,27 +74,45 @@ public class Range {
             logger.info(sdf.format(signUpDate.getTime()));
             signUpDate.add(Calendar.DATE, +60);
 
-            if (signUpDate.getTime().after(currentDate.getTime()))
-                logger.info(sdf.format(currentDate.getTime()));
-            else
-                logger.info(sdf.format(signUpDate.getTime()));
-
+            displayRange(signUpDate,currentDate);
             testCases = testCases - 1;
         }
     }
 
     /**
-     * invokes calculateRange method
+     * displays the Range of dates for KYC
+     *
+     * @param signUpDate
+     * @param currentDate
+     * The KYC form can be filled in between those days.
+     *  */
+
+    public void displayRange(Calendar signUpDate,Calendar currentDate){
+
+        if (signUpDate.getTime().after(currentDate.getTime()))
+            logger.info(sdf.format(currentDate.getTime()));
+        else
+            logger.info(sdf.format(signUpDate.getTime()));
+    }
+
+
+    /**
+     * Input for no of testCases is taken and invokes calculateRange method
      *
      * @throws IOException it is thrown when an input or output operation is failed i.e, readLine() method throws IOException.
      */
-    public void testCalculateRange() throws IOException {
+    public void testCalculateRange()  {
         System.out.println("Enter no of test cases ");
-        int testCases = Integer.parseInt(bufferedReader.readLine());
+        int testCases = 0;
+        try {
+            testCases = Integer.parseInt(bufferedReader.readLine());
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
         calculateRange(testCases);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         Range range = new Range();
         range.testCalculateRange();
     }
