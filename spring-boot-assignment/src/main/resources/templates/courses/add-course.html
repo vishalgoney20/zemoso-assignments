@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+	
+<style>
+	.alert {
+		  display:inline-block;
+	}
+</style>
+
+<title>Add Course</title>
+</head>
+
+<body>
+	<div class="container" style="">
+		<h3 style="margin: 35px 35px 35px 35px;">Add Course</h3>
+
+		<form action="#" th:action="@{/courses/save}" th:object="${course}"
+			method="POST">
+			<input type="hidden" th:field="*{id}" />
+			 
+			<input type="text" placeholder="Course Name ( * )" th:field="*{courseName}"
+				class="form-control mb-4 col-4"  />
+			<p class="alert alert-danger" th:if="${#fields.hasErrors('courseName')}" th:errors="*{courseName}"></p>
+				
+			<input type="text" placeholder="Course Duration ( * )" th:field="*{courseDuration}"
+				class="form-control mb-4 col-4" th:errorclass="error"/>
+			<p class="alert alert-danger" th:if="${#fields.hasErrors('courseDuration')}" th:errors="*{courseDuration}"></p>
+			<br>
+			<button type="Submit" class="btn btn-info col-2">Save</button>
+
+		</form>
+		<br>
+		<a th:href="@{/courses/list}" class="btn btn-info col-2" >Back to Courses list</a>
+	</div>
+</body>
+</html>

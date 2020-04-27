@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+	
+<style>
+	.alert {
+		  display:inline-block;
+	}
+</style>
+
+
+<title>Add Student</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3 >Add Student</h3>
+
+		<form action="#" th:action="@{/students/save}" th:object="${student}"
+			method="POST">
+			
+			<input type="hidden" th:field="*{id}"/>
+
+			<input type="text" placeholder="First Name" th:field="*{firstName}"
+				class="form-control mb-4 col-4" /> 
+			<input type="text" placeholder="last Name" th:field="*{lastName}"
+				class="form-control mb-4 col-4" /> 
+			<p class="alert alert-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+			<input type="text" placeholder="email" th:field="*{email}"
+				class="form-control mb-4 col-4" />
+			<p class="alert alert-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+			<button type="Submit" class="btn btn-info col-2">Save</button>
+		
+		</form>
+		
+		<a th:href="@{/students/list}">Back to Student list</a>
+	</div>
+</body>
+</html>

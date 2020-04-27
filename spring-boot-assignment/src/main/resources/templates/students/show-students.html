@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<title>Students</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3>Students List</h3>
+
+		<a th:href="@{/students/addStudent}"
+			class="btn btn-primary btn-sm mb-3">Add Student</a>
+		<a th:href="@{/home}" class="btn btn-primary btn-sm mb-3">Home</a>
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="temp : ${students}">
+					<td th:text="${temp.id}"></td>
+					<td th:text="${temp.firstName}"></td>
+					<td th:text="${temp.lastName}"></td>
+					<td th:text="${temp.email}"></td>
+					<td>
+					<a
+						th:href="@{/students/showFormForUpdate(studentId=${temp.id})}"
+						class="btn btn-info btn-sm">update</a> 
+						
+						<a th:href="@{/students/delete(studentId=${temp.id})}" onclick="if (!(confirm('Are you sure you want to delete'))) return false "
+						class="btn btn-danger btn-sm">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
