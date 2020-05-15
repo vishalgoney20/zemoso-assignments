@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="22px" viewBox="0 0 39 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>molecules/button/secondary/text</title>
+    <g id="molecules/button/secondary/text" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="RobotoCondensed-Bold, Roboto Condensed" font-size="12" font-style="condensed" font-weight="bold" line-spacing="22">
+        <text id="Resend" fill="#FF9052">
+            <tspan x="2.3359375" y="13">Resend</tspan>
+        </text>
+    </g>
+</svg>

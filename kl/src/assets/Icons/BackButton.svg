@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="22px" viewBox="0 0 52 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>molecules/button/secondary/text with icon</title>
+    <g id="molecules/button/secondary/text-with-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(3.000000, 0.000000)">
+            <g id="atoms/icon/left-arrow" transform="translate(0.000000, 4.000000)">
+                <g>
+                    <rect id="Rectangle" fill="#D8D8D8" opacity="0" x="0" y="0" width="14" height="14"></rect>
+                    <path d="M12.8333333,7.30022987 C12.8333333,6.93030978 12.5133557,6.63043031 12.1186434,6.63043031 L4.28028145,6.63043031 L7.18549606,4.09188997 C7.3827906,3.93108511 7.47063897,3.68214402 7.41455109,3.4428033 C7.3584632,3.20346259 7.16739304,3.01193106 6.91635653,2.9434058 C6.66532002,2.87488053 6.39439314,2.94030103 6.20994429,3.11398261 L1.97719311,6.80960169 C1.83228141,6.93628485 1.75,7.11367002 1.75,7.29939262 C1.75,7.48511522 1.83228141,7.66250039 1.97719311,7.78918355 L6.20994429,11.4864771 C6.4985777,11.7389476 6.95094601,11.7243285 7.2203372,11.4538244 C7.48972838,11.1833203 7.47412947,10.7593657 7.18549606,10.5068953 L4.28028145,7.97002943 L12.1186434,7.97002943 C12.5133557,7.97002943 12.8333333,7.67014995 12.8333333,7.30022987 Z" id="Path" fill="#FF9052"></path>
+                </g>
+            </g>
+            <text id="Back" font-family="RobotoCondensed-Bold, Roboto Condensed" font-size="14" font-style="condensed" font-weight="bold" line-spacing="22" fill="#FF9052">
+                <tspan x="18" y="15">Back</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
