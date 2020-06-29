@@ -7,11 +7,7 @@ import android.content.Context;
  */
 public class AddBidCommand extends Command {
 
-
-
-    
     private Bid bid;
-    
 
     public AddBidCommand( Bid bid) {
         this.bid = bid;
@@ -21,7 +17,7 @@ public class AddBidCommand extends Command {
     public void execute(){
 
        ElasticSearchManager.AddBidTask add_bid = new ElasticSearchManager.AddBidTask();
-        add_bid.execute(bid);
+        add_bid.execute(this.bid);
 
         try {
             if(add_bid.get()) {

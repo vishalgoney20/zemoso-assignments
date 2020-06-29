@@ -18,7 +18,7 @@ public class DeleteBidCommand extends Command {
     // Delete bid remotely
     public void execute(){
        ElasticSearchManager.RemoveBidTask remove_bid = new ElasticSearchManager.RemoveBidTask();
-        Remove_bid.execute(bid);
+        Remove_bid.execute(this.bid);
 
         try {
             if(remove_bid.get()) {

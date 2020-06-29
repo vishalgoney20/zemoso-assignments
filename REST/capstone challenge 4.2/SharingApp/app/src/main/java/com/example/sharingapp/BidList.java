@@ -120,7 +120,7 @@ public class BidList extends Observable {
     }
 
 
-    public void loadBids(Context context) {
+    public void getRemoteBids(Context context) {
 
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
